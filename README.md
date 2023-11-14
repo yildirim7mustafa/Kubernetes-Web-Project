@@ -16,13 +16,13 @@ Apply your yaml file for database setup
 ```bash
 kubectl create namespace pg-spring #create namespace 
 
-kubectl apply -f deploys/pg-deploy.yaml
+kubectl apply -f deployments/pg-deploy.yaml
 
-kubectl apply -f deploys/pg-pv.yaml
+kubectl apply -f deployments/pg-pv.yaml
 
-kubectl apply -f deploys/pg-pvc.yaml
+kubectl apply -f deployments/pg-pvc.yaml
 	
-kubectl apply -f deploys/pg-service.yaml
+kubectl apply -f deployments/pg-service.yaml
 ```
 
 **3. Create Database **
@@ -57,8 +57,8 @@ docker push yildirim7mustafa/deneme # now this image is in internet!
 ```
 **6. Lets deploy our web project **
 ```bash
-kubectl apply -f deploys/order-svc-deployment.yaml
-kubectl apply -f deploys/order-svc-service.yaml
+kubectl apply -f deployments/order-svc-deployment.yaml
+kubectl apply -f deployments/order-svc-service.yaml
 ```
 **6. Check setup **
 ```bash
@@ -72,7 +72,7 @@ if you want add ingress, you need to do this;
 - to enable minikube nginx ingress controller
 ```bash
 minikube addons enable ingress
-kubectl apply -f deploys/order-ingress.yaml
+kubectl apply -f deployments/order-ingress.yaml
 sudo nano /etc/hosts >> [minikube-ip  sanalmarket.com]
 ```
 Have a nice day
