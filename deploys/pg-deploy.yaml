@@ -24,7 +24,7 @@ spec:
           imagePullPolicy: "IfNotPresent"
           env:
             - name: POSTGRES_DB
-              value: northwind
+              value: market1
             - name: POSTGRES_USER
               value: postgres
             - name: POSTGRES_PASSWORD
