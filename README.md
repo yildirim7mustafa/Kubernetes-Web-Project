@@ -1,5 +1,5 @@
 ## Kubernetes project
-This project uses Spring Boot, PostgreSQL, Docker, Kubernetes, JPA, Hibernate REST API Demo technologies.
+This project uses Spring Boot, PostgreSQL, Docker, Kubernetes, JPA, Hibernate REST API technologies.
 
 ## Steps to Setup
 
