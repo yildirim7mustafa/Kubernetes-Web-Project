@@ -25,7 +25,7 @@ kubectl apply -f deployments/pg-pvc.yaml
 kubectl apply -f deployments/pg-service.yaml
 ```
 
-**3. Create Database **
+**3. Create Database**
 
 This project uses "market1" database, lets create database.
 
@@ -45,30 +45,30 @@ CREATE DATABASE market1;
 \l # you can show market1 database here
 ```
 
-**4. Clean & Install maven **
+**4. Clean & Install maven**
 
 ![image](https://github.com/yildirim7mustafa/k8s-project/assets/72528911/3f8cdbca-9f80-4a80-94fd-00378f24167b)
 
-**5. build docker file and make a image from jar file then push dockerhub repository **
+**5. build docker file and make a image from jar file then push dockerhub repository**
 
 ```bash
 docker build -t yildirim7mustafa/deneme .
 docker push yildirim7mustafa/deneme # now this image is in internet! 
 ```
-**6. Lets deploy our web project **
+**6. Lets deploy our web project**
 ```bash
 kubectl apply -f deployments/order-svc-deployment.yaml
 kubectl apply -f deployments/order-svc-service.yaml
 ```
-**6. Check setup **
+**6. Check setup**
 ```bash
 minikube ip
 kubectl get service -n pg-spring # take order service port
 ```
 Go browser "http://[minikube-ip]:[order-service-port]/api/v1/customer"
 
-**6. Optional **
-if you want add ingress, you need to do this;
+**6. Optional**
+if you want to add ingress, you need to do this;
 - to enable minikube nginx ingress controller
 ```bash
 minikube addons enable ingress
