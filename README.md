@@ -23,6 +23,8 @@ kubectl apply -f deployments/pg-pv.yaml
 kubectl apply -f deployments/pg-pvc.yaml
 	
 kubectl apply -f deployments/pg-service.yaml
+
+kubectl apply -f deployment/pg-configmap.yaml
 ```
 
 **3. Create Database**
